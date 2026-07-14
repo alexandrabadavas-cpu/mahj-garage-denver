@@ -178,6 +178,37 @@
   .event-card.green{ background:var(--green); }
   .event-card.lavender{ background:var(--lavender); }
 
+  .event-card.sold-out{
+    position:relative;
+    opacity:0.72;
+  }
+  .sold-out-badge{
+    position:absolute;
+    top:-12px;
+    right:16px;
+    background:var(--ink);
+    color:#fff;
+    font-family:'Baloo 2', sans-serif;
+    font-weight:800;
+    font-size:0.8rem;
+    letter-spacing:1px;
+    padding:6px 16px;
+    border-radius:100px;
+    box-shadow:0 3px 0 rgba(0,0,0,0.25);
+  }
+  .rsvp-disabled{
+    background:transparent;
+    color:var(--ink);
+    border-color:var(--ink);
+    opacity:0.6;
+    cursor:not-allowed;
+    box-shadow:none;
+  }
+  .rsvp-disabled:hover{
+    transform:none;
+    box-shadow:none;
+  }
+
   .date-badge{
     background:#fff;
     color:var(--ink);
@@ -389,20 +420,8 @@
   <h2 class="section-title">Summer Series</h2>
   <p class="section-sub">Every event below is a real table waiting for you. Click RSVP to reserve your spot.</p>
 
-    <div class="event-card yellow">
-    <div class="date-badge"><span class="day">08</span><span class="mon">JUL</span></div>
-    <div class="event-body">
-      <h3>Guided Play &amp; Open Play</h3>
-      <p class="event-meta">&#128205; The Garage &middot; 3830 W. 32nd Ave.</p>
-      <p class="event-price">$40 for Guided Play &middot; $30 for Open Play</p>
-      
-    </div>
-    <div class="event-time">6&ndash;9pm</div>
-    <div class="event-actions">
-      <a class="rsvp-btn" href="mailto:mahjgaragedenver@gmail.com?subject=Mahj%20Garage%20RSVP%20-%20Jul%208%20Guided/Open%20Play&body=Hi!%20I'd%20like%20to%20RSVP%20for%20this%20event.%20My%20name%20is:%20">RSVP for this table &rarr;</a>
-    </div>
-  </div>
-  <div class="event-card pink">
+    <div class="event-card pink sold-out">
+    <div class="sold-out-badge">SOLD OUT</div>
     <div class="date-badge"><span class="day">16</span><span class="mon">JUL</span></div>
     <div class="event-body">
       <h3>Beginner Lessons</h3>
@@ -412,14 +431,14 @@
     </div>
     <div class="event-time">6&ndash;9pm</div>
     <div class="event-actions">
-      <a class="rsvp-btn" href="mailto:mahjgaragedenver@gmail.com?subject=Mahj%20Garage%20RSVP%20-%20Jul%2016%20Beginner%20Lessons&body=Hi!%20I'd%20like%20to%20RSVP%20for%20this%20event.%20My%20name%20is:%20">RSVP for this table &rarr;</a>
+      <span class="rsvp-btn rsvp-disabled">Sold Out</span>
     </div>
   </div>
   <div class="event-card green">
     <div class="date-badge"><span class="day">30</span><span class="mon">JUL</span></div>
     <div class="event-body">
       <h3>Mid-Morning Mahj (Guided &amp; Open)</h3>
-      <p class="event-meta">&#128205; Every Little Thing &middot; 2159 W. 32nd Ave.</p>
+      <p class="event-meta">&#128205; Every Little Thing, LoHi &middot; 2158 W. 32nd Ave.</p>
       <p class="event-price">$25 for Guided Play &middot; $15 for Open Play</p>
       <p class="event-note">&#10024; Food &amp; beverage available to purchase</p>
     </div>
@@ -449,7 +468,7 @@
   <div class="rsvp-footer">
     <h2>Reserve Your Spot</h2>
     <p>Email: <a href="mailto:mahjgaragedenver@gmail.com">mahjgaragedenver@gmail.com</a></p>
-    <p>Venmo: <a href="https://venmo.com/Erica-Gartenberg" target="_blank" rel="noopener">@Erica-Gartenberg</a></p>
+    <p>Venmo: <a href="https://venmo.com/u/Erica-Gartenberg" target="_blank" rel="noopener">Venmo Erica here &rarr;</a></p>
     <p class="venmo-note">When you Venmo, please include your last name, ticket type, and the event date so we can match your payment to your RSVP.</p>
   </div>
 </section>
